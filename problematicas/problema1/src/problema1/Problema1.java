@@ -22,16 +22,19 @@ public class Problema1 {
         entrada.useLocale(Locale.US);
         String nombre;
         String posicion;
-        int edad;
         String ficha = "Listado de jugadores\n";
-        double estatura;
         String listadoEdades = "Listado de Edades\n";
+        int edad;
+        int contadorinteracciones = 1;
+        int limite;
+        double estatura;
         double promedioEdades = 0;
         double promedioEstaturas = 0;
-        int contador = 1;
-        int limite;
+        
+        
         System.out.println("Ingrese la cantidad de jugadores que va a ingresar");
         limite = entrada.nextInt();
+        
         for(int i=0;i<limite;i++){
             entrada.nextLine();
             System.out.println("Ingrese el nombre del jugador");
@@ -42,9 +45,11 @@ public class Problema1 {
             edad = entrada.nextInt();
             System.out.println("Ingrese la estatura del jugador");
             estatura = entrada.nextDouble();
+            entrada.nextLine();
+            
             ficha = String.format("%s%d. %s -%s-, edad %d, estatura %.2f\n", 
                     ficha,
-                    contador,
+                    contadorinteracciones,
                     nombre, 
                     posicion,
                     edad,
@@ -52,15 +57,15 @@ public class Problema1 {
             listadoEdades = String.format("%s%d\n", 
                     listadoEdades,
                     edad);
-            promedioEdades = (promedioEdades + edad) / contador;
-            promedioEstaturas = (promedioEstaturas + estatura) / contador;
-            contador = contador + 1;
+            promedioEdades = (promedioEdades + edad) / contadorinteracciones;
+            promedioEstaturas = (promedioEstaturas + estatura) / contadorinteracciones;
+            contadorinteracciones = contadorinteracciones + 1;
 
         }
         
         System.out.printf("%s%sPromedio de edades: %.2f\n"
-                + "Promedio de estaturas: "
-                + "%.2f\n", ficha,
+                + "Promedio de estaturas: %.2f\n", 
+                ficha,
                 listadoEdades,
                 promedioEdades,
                 promedioEstaturas);
