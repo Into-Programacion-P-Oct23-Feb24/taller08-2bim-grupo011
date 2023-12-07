@@ -17,19 +17,19 @@ public class Problema4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Scanner entrada = new Scanner(System.in);
-        entrada.useLocale(Locale.US);
-        int filas=5;
-        for (int i=1;i<filas;i++){
-            for (int j=1;j<=1;j++){
-            System.out.println("*");
-    }
-       System.out.println();
+
+        for (int i = 1; i <= 5; i++) {
+            for (int ola = 1; ola <= i; ola++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-       for (int i=filas-1;i>=1;i--){
-           System.out.println("*"); 
-       }
-        System.out.println();
+        for (int i = 5; i >= 1; i--) {
+            for (int ola = 1; ola <= i; ola++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
     }
 }
