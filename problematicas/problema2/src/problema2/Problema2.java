@@ -14,15 +14,12 @@ public class Problema2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num = 30;
-        String ficha = "";
-        int suma = 0;
+        int c = 10;
         //
-        for (int i = 1; contador <= 21 ; ++) {
-            suma = suma + num;
-            ficha = String.format("%s%d",ficha,num);
-            
+        for (int num = 30; num >= c; num--) {
+            System.out.printf("%d-%d-%d-%d\n",num, num*2, num*3,
+                    num*4);
         }
     }
-    
+
 }
