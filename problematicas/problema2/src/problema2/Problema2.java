@@ -14,7 +14,15 @@ public class Problema2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int num = 30;
+        String ficha = "";
+        int suma = 0;
+        //
+        for (int i = 1; contador <= 21 ; ++) {
+            suma = suma + num;
+            ficha = String.format("%s%d",ficha,num);
+            
+        }
     }
     
 }
