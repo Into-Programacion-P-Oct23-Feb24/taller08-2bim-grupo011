@@ -18,7 +18,7 @@ public class Problema1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         String nombre;
         String posicion;
@@ -32,7 +32,7 @@ public class Problema1 {
         int limite;
         System.out.println("Ingrese la cantidad de jugadores que va a ingresar");
         limite = entrada.nextInt();
-        do {
+        for(int i=0;i<limite;i++){
             entrada.nextLine();
             System.out.println("Ingrese el nombre del jugador");
             nombre = entrada.nextLine();
@@ -42,17 +42,26 @@ public class Problema1 {
             edad = entrada.nextInt();
             System.out.println("Ingrese la estatura del jugador");
             estatura = entrada.nextDouble();
-            ficha = String.format("%s%d. %s -%s-, edad %d, estatura %.2f\n", ficha,
-                    contador, nombre, posicion, edad, estatura);
+            ficha = String.format("%s%d. %s -%s-, edad %d, estatura %.2f\n", 
+                    ficha,
+                    contador,
+                    nombre, posicion,
+                    edad,
+                    estatura);
             listadoEdades = String.format("%s%d\n", listadoEdades,
                     edad);
             promedioEdades = (promedioEdades + edad) / contador;
             promedioEstaturas = (promedioEstaturas + estatura) / contador;
             contador = contador + 1;
 
-        } while (contador <= limite);
-        System.out.printf("%s%sPromedio de edades: %.2f\nPromedio de estaturas: "
-                + "%.2f\n", ficha, listadoEdades, promedioEdades, promedioEstaturas);
+        }
+        
+        System.out.printf("%s%sPromedio de edades: %.2f\n"
+                + "Promedio de estaturas: "
+                + "%.2f\n", ficha,
+                listadoEdades,
+                promedioEdades,
+                promedioEstaturas);
 
     }
 }
