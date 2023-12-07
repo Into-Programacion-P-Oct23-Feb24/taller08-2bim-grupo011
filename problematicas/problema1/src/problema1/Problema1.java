@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Problema1 {
 
-    /**
+    /*
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -45,10 +45,12 @@ public class Problema1 {
             ficha = String.format("%s%d. %s -%s-, edad %d, estatura %.2f\n", 
                     ficha,
                     contador,
-                    nombre, posicion,
+                    nombre, 
+                    posicion,
                     edad,
                     estatura);
-            listadoEdades = String.format("%s%d\n", listadoEdades,
+            listadoEdades = String.format("%s%d\n", 
+                    listadoEdades,
                     edad);
             promedioEdades = (promedioEdades + edad) / contador;
             promedioEstaturas = (promedioEstaturas + estatura) / contador;
